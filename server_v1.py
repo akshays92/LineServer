@@ -5,12 +5,17 @@ from flask import json
 from flask import Response
 from flask_pymongo import PyMongo
 import sys
+import pickle
 
-dburi='mongodb://user1:ImUser!@ds117749.mlab.com:17749/lineserver'
+#retriving the credentials
+with open('credentials.pickle', 'rb') as handle:
+    cred = pickle.load(handle)
+
+dburi=(cred['protocol']+cred['user']+':'+cred['password']+cred['link']+cred['db'])
 # Create our Flask app
 app = Flask(__name__)
 # Add MONGO_DBNAME and MONGO_URI to our app config
-app.config['MONGO_DBNAME'] = 'lineserver'
+app.config['MONGO_DBNAME'] = cred['db']
 app.config['MONGO_URI'] = dburi
 
 # Feed app into PyMongo() to generate a db connection
@@ -18,7 +23,7 @@ mongo = PyMongo(app)
 
 @app.route('/lines/<int:id>', methods=['GET'])
 def get_line(id):
-    lines = mongo.db['lines']
+    lines = mongo.db[cred['collection']]
     data = lines.find_one({"lineNumber": id})
     if data is not None:
     	js = json.dumps(data['text'])

@@ -4,11 +4,4 @@ sudo apt-get update
 sudo apt-get -y install python3-pip
 sudo pip3 install --upgrade pip
 sudo pip3 install --upgrade -r requirements.txt 
-#sudo apt-get install -y mongodb-org 
-#myMongoDatabase
-#d1070103@nwytg.com
-#circleProjectAdmin
-#circleProjectAdmin
-#I<3BlockChain
-#user1
-#ImUser!
+python3 ./credentials.py
