@@ -1,0 +1,4 @@
+small test is line number 1
+this is the second line
+this is the third one
+and this is the fourth and the last one

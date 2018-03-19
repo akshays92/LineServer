@@ -2,4 +2,13 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF50
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
 sudo apt-get update
 sudo apt-get -y install python3-pip
-sudo apt-get install -y mongodb-org
+sudo pip3 install --upgrade pip
+sudo pip3 install --upgrade -r requirements.txt 
+#sudo apt-get install -y mongodb-org 
+#myMongoDatabase
+#d1070103@nwytg.com
+#circleProjectAdmin
+#circleProjectAdmin
+#I<3BlockChain
+#user1
+#ImUser!
