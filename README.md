@@ -23,9 +23,13 @@ The following questions are answered in the readme.md
 - A linux system with python 3.x and sudo access (code doesnot implement virtual box yet!!) is required to build the system. 
 - you can deploy and run the code with the help of the following commands:
     > git clone https://github.com/akshays92/LineServer.git
+    
     > cd LineServer/
+    
     > sh build.sh (enter password for sudo access if prompted)
+    
     > sh run.sh filename
+    
 - this gets the file indexed and starts the REST server when the while file is indexed in the MongoDB
 
 ### How will the system perform with a 1gb, 10GB and a 100gb text file?
